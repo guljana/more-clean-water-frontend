@@ -13,12 +13,12 @@ function AddUser() {
         color: 'white',
         height: 48,
         padding: '30px',
-        alignItems: 'center'
+        marginLeft: '20%'
   };
 
   return (
     <Container fixed>
-        <form style={{align:'center'}} autoComplete="off" action="">
+        <form style={{align:'center'}} action="">
           <ul className="add-user">
             <li><AddUserDetails userType="name"/></li>
             <li><AddUserDetails userType="email"/></li>

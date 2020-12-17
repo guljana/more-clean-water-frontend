@@ -12,8 +12,8 @@ function AddUserDetails(props) {
   };
   return (
     <div>
-      { (props.userType === "name" || props.userType === "email") && <TextField style={addDetailsStyle} required id={props.userType} label={props.userType} /> }
-      { (props.userType === "password" || props.userType === "confirm password") && <TextField type="password" style={addDetailsStyle} required id={props.userType} label={props.userType} />}
+      { (props.userType === "name" || props.userType === "email") && <TextField autoComplete="on" style={addDetailsStyle} required id={props.userType} label={props.userType} /> }
+      { (props.userType === "password" || props.userType === "confirm password") && <TextField type="password" autoComplete="current-password" style={addDetailsStyle} required id={props.userType} label={props.userType} />}
     </div>
   );
 }
