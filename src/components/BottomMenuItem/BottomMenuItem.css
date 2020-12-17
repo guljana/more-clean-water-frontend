@@ -1,0 +1,25 @@
+.bottom-menu-item {
+    background-color: #fff;
+    border: none;
+    color: #666666;
+    float: left;
+    margin: 0;
+    text-align: center;
+    width: calc(100% / 3);
+}
+    .bottom-menu-item.selected,
+    .bottom-menu-item.selected a {
+        color: #c82a29;
+    }
+
+    .bottom-menu-item .bottom-menu-item__icon {
+        display: block;
+        height: 23px;
+        margin-bottom: 2px;
+    }
+
+    .bottom-menu-item .bottom-menu-item__title {
+        font-size: 12px;
+        font-weight: 300;
+        position: relative;
+    }
