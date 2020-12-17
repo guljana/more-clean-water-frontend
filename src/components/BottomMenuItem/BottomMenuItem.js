@@ -2,7 +2,7 @@ import './BottomMenuItem.css';
 
 function BottomMenuItem({id, icon, title, selected}) {
   return (
-    <button data-area="{id}" className={`bottom-menu-item ${selected ? 'selected' : ''}`}>
+    <button data-target={id} className={`bottom-menu-item ${selected ? 'selected' : ''}`}>
         <div className="bottom-menu-item__icon material-icons">
             <a href="findwater.html">{icon}</a>
         </div>
