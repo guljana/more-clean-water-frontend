@@ -1,0 +1,18 @@
+.bottom-bar {
+    background-color: #fff;
+    bottom: 0;
+    filter: drop-shadow(0 -1px 4px rgba(0,0,0,.1));
+    padding: 11px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+  }
+    @media screen and (min-width: 992px) {
+        .bottom-bar {
+            display: none;
+        }
+    }
+  
+    .bottom-bar .bottom-menu {
+        width: 100%;
+    }

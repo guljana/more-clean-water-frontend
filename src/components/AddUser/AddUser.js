@@ -1,7 +1,6 @@
-import React from 'react';
 import './AddUser.css';
 import Button from '@material-ui/core/Button';
-import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
 import AddUserDetails from './AddUserDetails/AddUserDetails';
 
 function AddUser() {
@@ -12,26 +11,35 @@ function AddUser() {
         boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
         color: 'white',
         height: 48,
-        padding: '30px',
-        marginLeft: '20%'
+        justifyContent: 'center',
+        width: '150px'
   };
 
   return (
-    <Container fixed>
-        <form style={{align:'center'}} action="">
-          <ul className="add-user">
-            <li><AddUserDetails userType="name"/></li>
-            <li><AddUserDetails userType="email"/></li>
-            <li><AddUserDetails userType="password"/></li>
-            <li><AddUserDetails userType="confirm password"/></li>
-            <li><Button style={saveButtonStyle} variant="outlined">
-                  SAVE
-              </Button>
-            </li>
-          </ul>
-        </form>
-    </Container>   
-  );
+      <Grid 
+        container
+        alignItems="center"
+        justify="center"
+        className="add-user"
+      >
+        <Grid item xs={10}>
+          <div className="form">
+            <form action="">
+                <AddUserDetails userType="name"/>
+                <AddUserDetails userType="email"/>
+                <AddUserDetails userType="password"/>
+                <AddUserDetails userType="confirm password"/>
+                <Grid item xs={12} className="center">
+                  <Button style={saveButtonStyle} variant="outlined">
+                    SAVE  
+                  </Button>
+                </Grid>
+                
+            </form>
+          </div>
+        </Grid>
+      </Grid>
+  )
 }
 
 export default AddUser;

@@ -1,4 +1,3 @@
-import React from 'react';
 import { TextField } from '@material-ui/core';
 import './AddUserDetails.css';
   
@@ -6,8 +5,8 @@ import './AddUserDetails.css';
 function AddUserDetails(props) {
   const addDetailsStyle = {
     height: '52px',
-    width: '319px',
-    margin: '20px',
+    width: '100%',
+    margin: '20px 0',
     padding: '0px'
   };
   return (
