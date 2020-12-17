@@ -1,38 +1,251 @@
-.App {
-  text-align: center;
+.bottom-bar {
+  background-color: #fff;
+  bottom: 0;
+  filter: drop-shadow(0 -1px 4px rgba(0,0,0,.1));
+  padding: 11px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  @media screen and (min-width: 992px) {
+      .bottom-bar {
+          display: none;
+      }
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .bottom-bar .bottom-menu {
+      width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .bottom-bar .bottom-menu .bottom-menu-item {
+      background-color: #fff;
+      border: none;
+      color: #666666;
+      float: left;
+      margin: 0;
+      text-align: center;
+      width: calc(100% / 3);
   }
+      .bottom-bar .bottom-menu .bottom-menu-item.selected,
+      .bottom-bar .bottom-menu .bottom-menu-item.selected a {
+          color: #c82a29;
+      }
+
+      .bottom-bar .bottom-menu .bottom-menu-item .bottom-menu-item__icon {
+          display: block;
+          height: 23px;
+          margin-bottom: 2px;
+      }
+
+      .bottom-bar .bottom-menu .bottom-menu-item .bottom-menu-item__title {
+          font-size: 12px;
+          font-weight: 300;
+          position: relative;
+      }
+
+.map-container {
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  z-index: 0;
 }
+  .map-container .map {
+      background-image: url(./img/map-mockup.png);
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      width: 100%;
+  }
+      @media screen and (min-width: 992px) {
+          .map-container .map {
+              background-image: url(./img/map-mockup-desktop.png);
+              background-position: right bottom;
+          }
+      }
+
+  .map-container .search {
+      margin: 15px auto;
+      position: relative;
+      width: 94%;
+  }
+      @media screen and (min-width: 992px) {
+          .map-container .search {
+              position: absolute;
+              left: 30px;
+              top: 100px;
+              width: initial;
+              z-index: 1;
+          }
+      }
+
+      .map-container .search label {
+          display: none;
+      }
+
+      .map-container .search input {
+          border: none;
+          border-radius: 27px;
+          color: #757575;
+          filter: drop-shadow(0 4px 2px rgba(0,0,0,.1));
+          font-family: Roboto;
+          font-size: 19px;
+          font-weight: 300;
+          height: 45px;
+          padding: 0 55px;
+          width: calc(100% - 110px);
+      }
+          @media screen and (min-width: 992px) {
+              .map-container .search input {
+                  border-radius: 10px;
+                  padding: 0 55px 0 15px;
+                  width: 290px;
+              }
+          }
+
+      .map-container .search .search__mylocation {
+          cursor: pointer;
+          font-size: 21px;
+          position: absolute;
+          right: 17px;
+          top: 12px;
+      }
+      
+      .map-container .map-labels {
+          background: #ffffff;
+          border-radius: 10px;
+          display: none;
+          filter: drop-shadow(0 4px 2px rgba(0,0,0,.1));
+          left: 30px;
+          padding: 60px 20px 20px;
+          position: absolute;
+          top: 115px;
+          width: 320px;
+      }  
+          @media screen and (min-width: 992px) {
+              .map-container .map-labels {
+                  display: block;
+              }
+          }
+
+          .map-container .map-labels .map-labels__item {
+              width: 100%;
+              display: inline-block;
+              margin-top: 23px;
+          }
+          
+          .map-container .map-labels .map-labels__item:first-child {
+              margin-top: 0;
+          }
+              .map-container .map-labels .map-labels__item > * {
+                  float: left;
+              }
+
+              .map-container .map-labels .map-labels__item .map-labels__icon {
+                  font-size: 27px;
+                  line-height: 27px;
+              }
+                  .map-container .map-labels .map-labels__item.station .map-labels__icon {
+                      color: #c82a29;
+                  }
+
+                  .map-container .map-labels .map-labels__item.natural .map-labels__icon {
+                      color: #9dc1f4;
+                  }
+
+                  .map-container .map-labels .map-labels__item.updates .map-labels__icon {
+                      color: #c82a29;
+                      font-size: 24px;
+                  }
+
+                  .map-container .map-labels .map-labels__item.groundwater .map-labels__icon {
+                      font-size: 23px;
+                      color: #9dc1f4;
+                  }
+
+              .map-container .map-labels .map-labels__item .map-labels__title {
+                  color: #606060;
+                  font-weight: 300;
+                  line-height: 27px;
+                  font-size: 15px;
+                  margin-left: 20px;
+              }
+
+              .updates-container {
+                margin: 110px auto 80px;
+            }
+                .updates-container.overlay {
+                    border: 1px #dddddd solid;
+                    /* display: none; */
+                    filter: drop-shadow(0 4px 6px rgba(0,0,0,.1));
+                    height: 375px;
+                    margin: 0;
+                    position: absolute;
+                    top: 70px;
+                    right: calc(50% - 45px);
+                    width: 420px;
+                    opacity: 0;
+                    transform: translateY(10px);
+                    display: none;
+                    transition: all ease-out 100ms;
+                }
+                    .updates-container.overlay::before {
+                        color: #ffffff;
+                        font-family: Material Icons;
+                        font-size: 60px;
+                        line-height: 1;
+                        position: absolute;
+                        content: "arrow_drop_up";
+                        top: -30px;
+                        right: 15px;
+                    }
+            
+                    .updates-container.overlay.show {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                    
+                .updates-container .update {
+                    background: #ffffff;
+                    filter: drop-shadow(0 4px 2px rgba(0,0,0,.1));
+                    margin-bottom: 20px;
+                    padding: 30px 25px;
+                }
+                    
+                    @media screen and (min-width: 992px) {
+                        .updates-container.overlay .update {
+                            border-bottom: 1px solid #e5e5e5;
+                            filter: none;
+                            margin-bottom: 0;
+                        }
+                        .updates-container.overlay .update:first-child {
+                            border-radius: 10px 10px 0 0;
+                        }
+                        .updates-container.overlay .update:last-child {
+                            border-radius: 0 0 10px 10px;
+                        }
+                    }
+            
+                .updates-container .update h2 {
+                    color: #288FEE;
+                    display: inline-block;
+                    font-weight: 400;
+                    line-height: 1.25;
+                    font-size: 18px;
+                    height: 25px;
+                    margin: 0;
+                    text-align: left;
+                    width: 100%;
+                }
+            
+                .updates-container .update p {
+                    display: inline-block;
+                    font-weight: 300;
+                    height: 40px;
+                    margin: 0;
+                    text-align: left;
+                    width: 100%;
+                }            
+            
