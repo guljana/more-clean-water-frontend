@@ -9,7 +9,7 @@
   }
     @media screen and (min-width: 992px) {
         .bottom-bar {
-            display: none;
+            /* display: none; */
         }
     }
   
