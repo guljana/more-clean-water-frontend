@@ -1,7 +1,7 @@
 import BottomMenuItem from './BottomMenuItem/BottomMenuItem';
 import './BottomMenu.css';
 
-function BottomMenu({target, icon, title, selected}) {
+function BottomMenu(  ) {
   return (
     <div id="bottom-bar" className="bottom-bar">
         <div className="bottom-menu">
