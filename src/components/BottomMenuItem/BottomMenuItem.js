@@ -4,10 +4,10 @@ function BottomMenuItem({id, icon, title, selected}) {
   return (
     <button data-target={id} className={`bottom-menu-item ${selected ? 'selected' : ''}`}>
         <div className="bottom-menu-item__icon material-icons">
-            <a href="findwater.html">{icon}</a>
+            {icon}
         </div>
         <div className="bottom-menu-item__title">
-            <a href="findwater.html">{title}</a>
+            {title}
         </div>
     </button>
   );
