@@ -17,17 +17,17 @@ function AddUser() {
   };
 
   return (
-    <Container fixed max>
+    <Container fixed>
         <form style={{align:'center'}} autoComplete="off" action="">
           <ul className="add-user">
             <li><AddUserDetails userType="name"/></li>
             <li><AddUserDetails userType="email"/></li>
             <li><AddUserDetails userType="password"/></li>
             <li><AddUserDetails userType="confirm password"/></li>
-              <li><Button style={saveButtonStyle} variant="outlined">
-                    SAVE
-                </Button>
-              </li>
+            <li><Button style={saveButtonStyle} variant="outlined">
+                  SAVE
+              </Button>
+            </li>
           </ul>
         </form>
     </Container>   

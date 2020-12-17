@@ -5,7 +5,7 @@ import AddUser from './components/AddUser/AddUser';
 function App() {
   return (
     <div className="App">
-       <AddUser/>
+    <div><AddUser/></div>
       <div id="bottom-bar" className="bottom-bar">
         <div className="bottom-menu">
           <BottomMenuItem target="water-awareness" icon="info" title="Water Awareness"/>
