@@ -23,20 +23,18 @@ function AddUser() {
         justify="center"
         className="add-user"
       >
-        <Grid item xs={10}>
-          <div className="form">
-            <form action="">
-                <AddUserDetails userType="name"/>
-                <AddUserDetails userType="email"/>
-                <AddUserDetails userType="password"/>
-                <AddUserDetails userType="confirm password"/>
-                <Grid item xs={12} className="center">
-                  <Button style={saveButtonStyle} variant="outlined">
-                    SAVE  
-                  </Button>
-                </Grid>
-            </form>
-          </div>
+        <Grid item xs={10} className="form">
+          <form action="">
+              <AddUserDetails userType="name"/>
+              <AddUserDetails userType="email"/>
+              <AddUserDetails userType="password"/>
+              <AddUserDetails userType="confirm password"/>
+              <Grid item xs={12} className="center">
+                <Button style={saveButtonStyle} variant="outlined">
+                  SAVE  
+                </Button>
+              </Grid>
+          </form>
         </Grid>
       </Grid>
   )

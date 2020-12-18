@@ -30,10 +30,10 @@ function Updates({children}) {
         alignItems="center"
         justify="center"
         className="updates"
-      >
-        <Grid item xs={10} className="updates-list">
-          {updatesList}
-        </Grid>
+    >
+      <Grid item xs={10} className="updates-list">
+        {updatesList}
+      </Grid>
     </Grid>
   )
 }
