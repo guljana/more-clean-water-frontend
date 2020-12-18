@@ -1,0 +1,6 @@
+.updates {
+    height: 100vh;
+}
+    .updates-list {
+        transform: translateY(-30px);
+    }

@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Switch, Route, NavLink} from 'react-router-dom'
 import AddUser from './components/AddUser/AddUser';
 import BottomMenu from './components/BottomMenu/BottomMenu';
 import BottomMenuItem from './components/BottomMenu/BottomMenuItem/BottomMenuItem';
+import Updates from './components/Updates/Updates';
 
 function App() {
   return (
@@ -32,7 +33,7 @@ function App() {
           </Route>
 
           <Route path="/updates">
-            Updates
+            <Updates />
           </Route>
 
           <Route path="/">
