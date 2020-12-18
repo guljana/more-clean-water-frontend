@@ -1,18 +1,46 @@
 import './App.css';
+import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import AddUser from './components/AddUser/AddUser';
+import Updates from './components/Updates/Updates';
 import BottomMenu from './components/BottomMenu/BottomMenu';
 import BottomMenuItem from './components/BottomMenu/BottomMenuItem/BottomMenuItem';
 
 function App() {
   return (
-    <div className="App">
-      <AddUser/>
-      <BottomMenu>
-          <BottomMenuItem target="water-awareness" icon="info" title="Water Awareness"/>
-          <BottomMenuItem target="find-water" icon="room" title="Find Water" selected={true}/>
-          <BottomMenuItem target="updates" icon="notifications" title="Updates"/>
-      </BottomMenu>
-    </div>
+    <Router>
+      <div className="App">
+        <BottomMenu>
+            <Link to="/water-awareness">
+              <BottomMenuItem icon="info" title="Water Awareness"/>
+            </Link>
+
+            <Link to="/find-water">
+              <BottomMenuItem icon="room" title="Find Water" selected={true}/>
+            </Link>
+
+            <Link to="/updates">
+              <BottomMenuItem icon="notifications" title="Updates"/>
+            </Link>
+        </BottomMenu>
+      </div>
+      <Switch>
+        <Route path="/">
+          <AddUser />
+        </Route>
+
+        <Route path="/water-awareness">
+          <Updates />
+        </Route>
+
+        <Route path="/updates">
+          <Updates />
+        </Route>
+
+        <Route path="/updates">
+          <Updates />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
