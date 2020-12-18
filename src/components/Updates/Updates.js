@@ -31,7 +31,6 @@ function Updates({children}) {
       <UpdatesItem 
         title={update.title}
         description={update.description} 
-        read={update.read}
       />)
   });
 

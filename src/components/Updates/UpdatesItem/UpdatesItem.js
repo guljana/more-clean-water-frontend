@@ -1,6 +1,6 @@
 import './UpdatesItem.css';
 
-function UpdatesItem({title, description, read}) {
+function UpdatesItem({title, description}) {
   return (
     <div className="update">
         <h2 class="update__title">
