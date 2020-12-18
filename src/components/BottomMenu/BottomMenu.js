@@ -3,11 +3,11 @@ import './BottomMenu.css';
 function BottomMenu({children}) {
   return (
     <nav>
-      <ul className="bottom-bar">
-          <div className="bottom-menu">
+      <div className="bottom-bar">
+          <ul className="bottom-menu">
             {children}
-          </div>
-      </ul>
+          </ul>
+      </div>
     </nav>
   );
 }

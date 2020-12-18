@@ -9,7 +9,7 @@ li.bottom-menu-item {
 }
     li.bottom-menu-item.selected,
     li.bottom-menu-item.selected a {
-        color: #c82a29;
+        /* color: #c82a29; */
     }
 
     li.bottom-menu-item .bottom-menu-item__icon {

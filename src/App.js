@@ -1,7 +1,6 @@
 import './App.css';
-import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route, NavLink} from 'react-router-dom';
 import AddUser from './components/AddUser/AddUser';
-import Updates from './components/Updates/Updates';
 import BottomMenu from './components/BottomMenu/BottomMenu';
 import BottomMenuItem from './components/BottomMenu/BottomMenuItem/BottomMenuItem';
 
@@ -10,17 +9,17 @@ function App() {
     <Router>
       <div className="App">
         <BottomMenu>
-            <Link to="/water-awareness">
+            <NavLink to="/water-awareness">
               <BottomMenuItem icon="info" title="Water Awareness"/>
-            </Link>
+            </NavLink>
 
-            <Link to="/find-water">
-              <BottomMenuItem icon="room" title="Find Water" selected={true}/>
-            </Link>
+            <NavLink to="/find-water">
+              <BottomMenuItem icon="room" title="Find Water"/>
+            </NavLink>
 
-            <Link to="/updates">
+            <NavLink to="/updates">
               <BottomMenuItem icon="notifications" title="Updates"/>
-            </Link>
+            </NavLink>
         </BottomMenu>
       
         <Switch>
@@ -39,8 +38,6 @@ function App() {
           <Route path="/">
             <AddUser />
           </Route>
-
-     
         </Switch>
       </div>  
     </Router>

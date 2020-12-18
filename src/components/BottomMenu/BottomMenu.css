@@ -1,20 +1,24 @@
-ul.bottom-bar {
+.bottom-bar {
     background-color: #fff;
-    list-style: none;
     bottom: 0;
     filter: drop-shadow(0 -1px 4px rgba(0,0,0,.1));
-    margin: 0;
     padding: 11px 0;
     position: fixed;
     width: 100%;
     z-index: 1;
   }
     @media screen and (min-width: 992px) {
-        ul.bottom-bar {
+        .bottom-bar {
             /* display: none; */
         }
     }
   
-    ul.bottom-bar .bottom-menu {
+    .bottom-bar ul.bottom-menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
         width: 100%;
+    }
+    .bottom-bar ul.bottom-menu .active > * {
+        color: #c82a29;
     }
