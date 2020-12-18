@@ -22,24 +22,27 @@ function App() {
               <BottomMenuItem icon="notifications" title="Updates"/>
             </Link>
         </BottomMenu>
-      </div>
-      <Switch>
-        <Route path="/">
-          <AddUser />
-        </Route>
+      
+        <Switch>
+          <Route path="/water-awareness">
+            Water Awareness
+          </Route>
 
-        <Route path="/water-awareness">
-          <Updates />
-        </Route>
+          <Route path="/find-water">
+            Find Water
+          </Route>
 
-        <Route path="/updates">
-          <Updates />
-        </Route>
+          <Route path="/updates">
+            Updates
+          </Route>
 
-        <Route path="/updates">
-          <Updates />
-        </Route>
-      </Switch>
+          <Route path="/">
+            <AddUser />
+          </Route>
+
+     
+        </Switch>
+      </div>  
     </Router>
   );
 }
