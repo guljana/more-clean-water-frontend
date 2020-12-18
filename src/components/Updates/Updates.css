@@ -2,5 +2,5 @@
     height: 100vh;
 }
     .updates-list {
-        transform: translateY(40px);
+        margin-top: 40px;
     }

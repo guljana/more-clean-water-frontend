@@ -1,7 +1,7 @@
 import { useState } from "react";
-import UpdatesItem from './UpdatesItem/UpdatesItem';
 import Grid from '@material-ui/core/Grid';
 import './Updates.css';
+import UpdatesList from "./UpdatesList/UpdatesList";
 
 function Updates({children}) {
   const [updates, setUpdates] = useState([
@@ -22,17 +22,7 @@ function Updates({children}) {
     }
   ]);
 
-  let updatesList = [];
-
   const unreadUpdates = updates.filter(update => !update.read);
-
-  unreadUpdates.forEach((update) => {
-    updatesList.push (
-      <UpdatesItem 
-        title={update.title}
-        description={update.description} 
-      />)
-  });
 
   return (
     <Grid 
@@ -41,8 +31,8 @@ function Updates({children}) {
         justify="center"
         className="updates"
     >
-      <Grid item xs={10} className="updates-list">
-        {updatesList}
+      <Grid item xs={10}>
+        <UpdatesList updates={unreadUpdates} />
       </Grid>
     </Grid>
   )
