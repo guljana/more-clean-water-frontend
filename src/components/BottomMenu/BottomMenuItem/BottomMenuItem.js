@@ -2,7 +2,7 @@ import './BottomMenuItem.css';
 
 function BottomMenuItem({icon, title, selected}) {
   return (
-    <li className={`bottom-menu-item ${selected ? 'selected' : ''}`}>
+    <li className='bottom-menu-item'>
         <div className="bottom-menu-item__icon material-icons">
             {icon}
         </div>

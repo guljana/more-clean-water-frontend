@@ -7,11 +7,6 @@ li.bottom-menu-item {
     text-align: center;
     width: calc(100% / 3);
 }
-    li.bottom-menu-item.selected,
-    li.bottom-menu-item.selected a {
-        /* color: #c82a29; */
-    }
-
     li.bottom-menu-item .bottom-menu-item__icon {
         display: block;
         height: 23px;
