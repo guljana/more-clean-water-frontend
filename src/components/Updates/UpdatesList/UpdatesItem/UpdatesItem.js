@@ -1,16 +1,19 @@
 import './UpdatesItem.css';
 
-function UpdatesItem({title, description}) {
+function UpdatesItem({id, title, description, markAsRead}) {
+  
+  const handleClick = () => markAsRead(id);
+
   return (
-    <div className="update">
-        <h2 class="update__title">
+    <li className="update-item" onClick={handleClick}>
+        <h2 className="update__title">
             {title}
         </h2>
 
-        <p class="update__description">
+        <p className="update__description">
             {description}
         </p>
-    </div>
+    </li>
   )
 }
 

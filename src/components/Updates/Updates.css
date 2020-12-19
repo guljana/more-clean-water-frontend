@@ -1,6 +1,6 @@
 .updates {
     height: 100vh;
 }
-    .updates-list {
-        margin-top: 40px;
+    .updates .updates-list {
+        margin: 40px 0 0;
     }

@@ -1,11 +1,12 @@
-.updates .update {
+ul.updates-list li {
     background: #ffffff;
+    cursor: pointer;
     filter: drop-shadow(0 4px 2px rgba(0,0,0,.1));
     margin-bottom: 20px;
     padding: 30px 25px;
 }
 
-.updates .update h2 {
+ul.updates-list li h2 {
     color: #288FEE;
     display: inline-block;
     font-weight: 400;
@@ -17,7 +18,7 @@
     width: 100%;
 }
 
-.updates .update p {
+ul.updates-list li p {
     display: inline-block;
     font-weight: 300;
     height: 40px;
