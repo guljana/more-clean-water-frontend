@@ -1,6 +1,6 @@
 import './BottomMenuItem.css';
 
-function BottomMenuItem({icon, title, selected}) {
+function BottomMenuItem({icon, title}) {
   return (
     <li className='bottom-menu-item'>
         <div className="bottom-menu-item__icon material-icons">

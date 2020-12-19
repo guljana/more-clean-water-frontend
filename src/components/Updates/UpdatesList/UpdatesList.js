@@ -1,3 +1,4 @@
+import Grid from '@material-ui/core/Grid';
 import { useState } from "react";
 import UpdatesItem from './UpdatesItem/UpdatesItem';
 
@@ -31,20 +32,32 @@ function UpdatesList() {
   
   const unreadUpdates = updates.filter(update => !update.isReaded);
 
-
-    return (
+  return (
+    <div>
       <ul className="updates-list">
-					{unreadUpdates.map(update => 
-						<UpdatesItem 
-								key={update.id}
-								id={update.id}
-								title={update.title}
+          {unreadUpdates.map(update => 
+            <UpdatesItem 
+                key={update.id}
+                id={update.id}
+                title={update.title}
                 description={update.description}
                 markAsRead={markAsRead}
-						/>
-					)}
-			</ul>
-    )
+            />
+          )}
+      </ul>
+      
+      <div className="total">
+        {unreadUpdates.length > 0 ? `Total updates: ${unreadUpdates.length}` : 
+        <Grid 
+          className="full-height no-margin no-items" 
+          container 
+          justify="center" 
+          alignItems="center"> 
+            Hooray! No updates!
+        </Grid>}
+      </div>
+    </div>
+  )
 }
 
 export default UpdatesList;

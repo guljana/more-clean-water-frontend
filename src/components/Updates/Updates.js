@@ -7,7 +7,7 @@ function Updates() {
     <Grid 
         container
         justify="center"
-        className="updates"
+        className="updates full-height"
     >
       <Grid item xs={10}>
         <UpdatesList />
