@@ -1,6 +1,6 @@
 import './App.css';
 import {BrowserRouter as Router, Switch, Route, NavLink} from 'react-router-dom';
-import AddUser from './components/AddUser/AddUser';
+import SignUp from './components/SignUp/SignUp';
 import BottomMenu from './components/BottomMenu/BottomMenu';
 import BottomMenuItem from './components/BottomMenu/BottomMenuItem/BottomMenuItem';
 import Updates from './components/Updates/Updates';
@@ -37,7 +37,7 @@ function App() {
           </Route>
 
           <Route path="/">
-            <AddUser />
+            <SignUp />
           </Route>
         </Switch>
       </div>  

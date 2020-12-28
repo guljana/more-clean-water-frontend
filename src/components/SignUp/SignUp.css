@@ -1,0 +1,6 @@
+ul.sign-up li {
+    display: none;
+}
+    ul.sign-up li.active {
+        display: block;
+    }

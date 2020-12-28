@@ -18,4 +18,3 @@ function UpdatesItem({id, title, description, markAsRead}) {
 }
 
 export default UpdatesItem;
-   
