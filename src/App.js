@@ -3,7 +3,7 @@ import SignUp from './components/SignUp/SignUp';
 import BottomMenu from './components/BottomMenu/BottomMenu';
 import BottomMenuItem from './components/BottomMenu/BottomMenuItem/BottomMenuItem';
 import Updates from './components/Updates/Updates';
-import './App.css';
+import './App.scss';
 
 function App() {
   return (

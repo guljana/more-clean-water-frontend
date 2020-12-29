@@ -1,0 +1,30 @@
+.container {
+    padding-top: 30px;   
+
+    ul > {
+        li {
+            display: none;
+            flex-direction: column;
+            justify-content: flex-start;
+            height: calc(100vh - 180px);
+    
+            * {
+                margin: 10px 0;
+            }
+            
+            li {
+                display: block;
+                height: initial;
+            }
+        }
+    }
+    
+    .buttons {
+        text-align: center;
+        display: block;
+
+        button {
+            margin-right: 10px!important;
+        }
+    }
+}
