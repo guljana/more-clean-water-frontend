@@ -2,7 +2,7 @@ import {useState} from "react";
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import {Account, Personal, Confirmation} from './SignUpSteps'
-import styles from './SignUp.module.scss';
+import {container} from './SignUp.module.scss';
 
 function SignUp() {
     const [form, setForm] = useState({})
@@ -20,7 +20,7 @@ function SignUp() {
         <Grid 
         container
         justify="center"
-        className={styles.container}
+        className={container}
         >
             <Grid item xs={10}>
                 <form>
@@ -35,14 +35,32 @@ function SignUp() {
                             postCode={form.postCode}
                         />
                     </ul>
-                    <div className={styles.buttons}>
-                        <Button variant="text" color="primary" disableElevation onClick={prev} className={step === 1 ? 'hidden' : ''}>
+                    <div className="center">
+                        <Button 
+                            variant="text"
+                            color="primary"
+                            disableElevation
+                            onClick={prev}
+                            className={step === 1 ? 'hidden' : ''}
+                        >
                             Previous
                         </Button>
-                        <Button variant="contained" color="primary" disableElevation onClick={next} className={step === 3 ? 'hidden' : ''}>
+                        <Button 
+                            variant="contained"
+                            color="primary"
+                            disableElevation
+                            onClick={next}
+                            className={step === 3 ? 'hidden' : ''}
+                        >
                             Next
                         </Button>
-                        <Button variant="contained" color="primary" disableElevation onClick={submit} className={step < 3 ? 'hidden' : ''}>
+                        <Button 
+                            variant="contained"
+                            color="primary"
+                            disableElevation
+                            onClick={submit}
+                            className={step < 3 ? 'hidden' : ''}
+                        >
                             Submit
                         </Button>
                     </div>
