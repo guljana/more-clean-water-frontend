@@ -1,11 +1,7 @@
 .sign-up {
- padding-top: 30px;   
+    padding-top: 30px;   
 }
 
-.sign-up, 
-.sign-up ul * {
-    width: 100%;
-}
 
 .sign-up ul > li {
     display: none;
@@ -13,8 +9,8 @@
     .sign-up ul > li.active {
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
-        height: 70vh;
+        justify-content: flex-start;
+        height: calc(100vh - 180px);
     }
 
     .sign-up ul > li.active * {
@@ -27,6 +23,7 @@
     
     .sign-up .buttons {
        text-align: center;
+       display: block;
     }
         .sign-up button {
             margin-right: 10px!important;

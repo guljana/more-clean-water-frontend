@@ -30,32 +30,28 @@ function SignUp() {
                 <ul>
                     <Account isActive={step === 1} onChange={handleChange}/>
                     <Personal isActive={step === 2} onChange={handleChange}/>
-										<Confirmation isActive={step === 3} 	
-											email={form.email}
-											firstName={form.firstName}
-											lastName={form.lastName}
-											county={form.county}
-											postCode={form.postCode}
-										/>
+                    <Confirmation isActive={step === 3} 	
+                        email={form.email}
+                        firstName={form.firstName}
+                        lastName={form.lastName}
+                        county={form.county}
+                        postCode={form.postCode}
+                    />
                 </ul>
                 <div className="buttons">
-									<Button variant="contained" color="primary" disableElevation onClick={prev} className={step === 1 ? 'hidden' : ''}>
-										Previous
-									</Button>
-									<Button variant="contained" color="primary" disableElevation onClick={next} className={step === 3 ? 'hidden' : ''}>
-										Next
-									</Button>
-									<Button variant="contained" color="primary" disableElevation className={step < 3 ? 'hidden' : ''}>
-										Submit
-									</Button>
-								</div>
+                    <Button variant="contained" color="primary" disableElevation onClick={prev} className={step === 1 ? 'hidden' : ''}>
+                        Previous
+                    </Button>
+                    <Button variant="contained" color="primary" disableElevation onClick={next} className={step === 3 ? 'hidden' : ''}>
+                        Next
+                    </Button>
+                    <Button variant="contained" color="primary" disableElevation className={step < 3 ? 'hidden' : ''}>
+                        Submit
+                    </Button>
+                </div>
             </Grid>
         </Grid>
     )
 }
 
 export default SignUp;
-
-
-
-// FirstName, Last Name, Email, Password/confirm password, county and post code fields

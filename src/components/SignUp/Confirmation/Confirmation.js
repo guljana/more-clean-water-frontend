@@ -8,7 +8,7 @@ function Confirmation({isActive, form, email, firstName, lastName, county, postC
                 <li>First name: {firstName}</li>
                 <li>Last Name: {lastName}</li>
                 <li>County: {county}</li>
-                <li>postcode: {postCode}</li>
+                <li>Post code: {postCode}</li>
             </ul>
         </li>
     )
