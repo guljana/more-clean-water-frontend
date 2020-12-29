@@ -5,9 +5,9 @@ import './Updates.css';
 function Updates() {
   return (
     <Grid 
-        container
-        justify="center"
-        className="updates full-height"
+      container
+      justify="center"
+      className="updates full-height"
     >
       <Grid item xs={10}>
         <UpdatesList />

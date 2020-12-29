@@ -1,9 +1,9 @@
-import './App.css';
 import {BrowserRouter as Router, Switch, Route, NavLink} from 'react-router-dom';
 import SignUp from './components/SignUp/SignUp';
 import BottomMenu from './components/BottomMenu/BottomMenu';
 import BottomMenuItem from './components/BottomMenu/BottomMenuItem/BottomMenuItem';
 import Updates from './components/Updates/Updates';
+import './App.css';
 
 function App() {
   return (

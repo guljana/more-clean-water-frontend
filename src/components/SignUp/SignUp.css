@@ -1,6 +1,33 @@
-ul.sign-up li {
+.sign-up {
+ padding-top: 30px;   
+}
+
+.sign-up, 
+.sign-up ul * {
+    width: 100%;
+}
+
+.sign-up ul > li {
     display: none;
 }
-    ul.sign-up li.active {
+    .sign-up ul > li.active {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 70vh;
+    }
+
+    .sign-up ul > li.active * {
+        margin: 10px 0;
+    }
+
+    .sign-up ul > li.active li {
         display: block;
     }
+    
+    .sign-up .buttons {
+       text-align: center;
+    }
+        .sign-up button {
+            margin-right: 10px!important;
+        }
