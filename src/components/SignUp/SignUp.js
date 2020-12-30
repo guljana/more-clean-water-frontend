@@ -5,7 +5,15 @@ import {Account, Personal, Confirmation} from './SignUpSteps'
 import {container} from './SignUp.module.scss';
 
 function SignUp() {
-    const [form, setForm] = useState({})
+    const [form, setForm] = useState({
+        email: '',
+        password: '',
+        firstName: '',
+        lastName: '',
+        county: '',
+        postcode: ''
+    })
+
     const [step, setStep] = useState(1)
 
     const prev = (e) => setStep(step > 1 ? step - 1 : step)
@@ -26,7 +34,7 @@ function SignUp() {
                 <form>
                     <ul>
                         <Account isActive={step === 1} onChange={handleChange}/>
-                        <Personal isActive={step === 2} onChange={handleChange}/>
+                        <Personal isActive={step === 2} county={form.county} onChange={handleChange}/>
                         <Confirmation isActive={step === 3} 	
                             email={form.email}
                             firstName={form.firstName}

@@ -1,59 +1,73 @@
-import { TextField } from '@material-ui/core';
+import { TextField, Select, InputLabel, FormControl, makeStyles } from '@material-ui/core';
 
 function Account({isActive, onChange}) {
     return (
         <li className={`account${isActive ? ' active-flex' : ''}`}>
-            <TextField
-                autoComplete="on"
-                required id='email'
-                label='Email'
-                onChange={onChange}
-            />
-            <TextField
-                autoComplete="on"
-                required id='password'
-                label='Password'
-                type="password"
-                onChange={onChange}
-            />
-            <TextField
-                autoComplete="on"
-                required id='confirm-password'
-                label='Confirm password'
-                type="password"
-                onChange={onChange}
-            />
+            <FormControl>
+                <TextField
+                    autoComplete="on"
+                    required id='email'
+                    label='Email'
+                    onChange={onChange}
+                />
+                <TextField
+                    autoComplete="on"
+                    required id='password'
+                    label='Password'
+                    type="password"
+                    onChange={onChange}
+                />
+                <TextField
+                    autoComplete="on"
+                    required id='confirm-password'
+                    label='Confirm password'
+                    type="password"
+                    onChange={onChange}
+                />
+            </FormControl>
         </li>
     )
 }
 
-function Personal({isActive, onChange}) {
+function Personal({isActive, county, onChange}) {
     return (
         <li className={`personal${isActive ? ' active-flex' : ''}`}>
-            <TextField
-                autoComplete="on"
-                required id='firstName'
-                label='First name'
-                onChange={onChange}
-            />
-            <TextField
-                autoComplete="on"
-                required id='lastName'
-                label='Last name'
-                onChange={onChange}
-            />
-            <TextField
-                autoComplete="on"
-                required id='county'
-                label='County'
-                onChange={onChange}
-            />
-            <TextField
-                autoComplete="on"
-                required id='postCode'
-                label='Post code'
-                onChange={onChange}
-            />
+                <TextField
+                    autoComplete="on"
+                    required id='firstName'
+                    label='First name'
+                    onChange={onChange}
+                />
+                <TextField
+                    autoComplete="on"
+                    id='lastName'
+                    label='Last name'
+                    onChange={onChange}
+                    required 
+                />
+                <FormControl>
+                    <InputLabel htmlFor="county">County</InputLabel>
+                    <Select
+                    native
+                    value={county}
+                    onChange={onChange}
+                    inputProps={{
+                        name: 'county',
+                        id: 'county',
+                    }}
+                    >
+                        <option aria-label="None" value="" />
+                        <option value="Great London">Great London</option>
+                    </Select>
+                </FormControl>
+                <TextField
+                    autoComplete="on"
+                    id='postCode'
+                    label='Post code'
+                    onChange={onChange}
+                    required 
+                />
+            
         </li>
     )
 }
